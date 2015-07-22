@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<manifest>
+
+  <include name="base-kk.xml"/>
+
+  <!-- picasso specific things -->
+
+  <default remote="caf" revision="refs/tags/android-4.4.2_r1" sync-j="4"/>
+
+  <remote name="sousmangoosta"
+          fetch="https://github.com/sousmangoosta/"/>
+  <remote name="omnirom"
+          fetch="https://github.com/omnirom/"/>
+
+  <project name="platform/external/icu4c" path="external/icu4c" remote="aosp"/>
+  <project name="platform_system_core" path="system/core" remote="sousmangoosta" revision="b2g-kk"/>
+
+  <remove-project name="platform/hardware/libhardware"/>
+  <remove-project name="platform/hardware/libhardware_legacy"/>
+  <remove-project name="platform/external/bluetooth/bluedroid"/>
+  <remove-project name="platform_system_bluetoothd"/>
+  <remove-project name="platform/frameworks/native"/>
+
+  <project path="frameworks/native" name="android_frameworks_native" remote="omnirom" revision="android-4.4"/>
+  <project path="system/bluetoothd" name="platform_system_bluetoothd" remote="sousmangoosta" revision="b2g-kk"/>
+  <project path="external/bluetooth/bluedroid" name="android_external_bluetooth_bluedroid" remote="omnirom" revision="android-4.4"/>
+  <project path="hardware/libhardware" name="android_hardware_libhardware" remote="omnirom" revision="android-4.4"/>
+  <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" remote="omnirom" revision="android-4.4"/>
+  <project path="frameworks/av" name="android_frameworks_av" remote="omnirom" revision="android-4.4"/>
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="sousmangoosta" revision="b2g-kk"/>
+  <project path="hardware/ril" name="android_hardware_ril" remote="omnirom" revision="android-4.4"/>
+  <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8"/>
+  <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan"/>
+  <project path="hardware/broadcom/libbt" name="platform/hardware/broadcom/libbt"/>
+  <project path="hardware/samsung" name="hardware_samsung" remote="sousmangoosta" revision="b2g-kk"/>
+  <project path="device/samsung/smdk4412-common" name="device_samsung_smdk4412-common" remote="sousmangoosta" revision="b2g-kk"/>
+  <project path="device/samsung/i9300" name="device_samsung_i9300" remote="sousmangoosta" revision="b2g-kk"/>
+  <project path="kernel/samsung/smdk4412" name="android_kernel_samsung_smdk4412" remote="sousmangoosta" revision="b2g-kk"/>
+
+</manifest>
